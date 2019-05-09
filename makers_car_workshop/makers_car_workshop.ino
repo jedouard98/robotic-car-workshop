@@ -14,8 +14,8 @@ void setup() {
   pinMode(enBPin, OUTPUT);
   pinMode(in1Pin, OUTPUT);
   pinMode(in2Pin, OUTPUT);
-  pinMode(in3, OUTPUT);
-  pinMode(in4, OUTPUT);
+  pinMode(in3Pin, OUTPUT);
+  pinMode(in4Pin, OUTPUT);
 }
 
 void moveForward() {
@@ -52,7 +52,7 @@ void stopMoving() {
     int motorSpeedA = 0;
     int motorSpeedB = 0;
     analogWrite(enAPin, motorSpeedA); // Send PWM signal to motor A
-    analogWrite(enBPin, motorSpeedB); // Send PWM signal to motor B
+    analogWrite(enBPin, motorSpeedB);  // Send PWM signal to motor B
 }
 
 void moveLeft() {
@@ -64,7 +64,7 @@ void moveRight() {
 }
 
 void loop() {
-  moveForwards();
+  moveForward();
   delay(2000);
   moveBackwards();
   delay(2000);
